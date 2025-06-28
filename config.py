@@ -1,7 +1,12 @@
-BOT_TOKEN = "ВАШ_ТОКЕН_БОТА"
-CHANNEL_ID = -1001234567890  # ID приватного канала
-CHANNEL_LINK = "https://t.me/your_channel"
-PAYMENT_LINK = "https://вашбанк.сом/оплата?сумма=5"
-SUBSCRIPTION_DAYS = 30
-GRACE_PERIOD_DAYS = 3
-ADMIN_ID = 123456789  # ваш Telegram ID
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
+CHANNEL_LINK = os.getenv("CHANNEL_LINK")
+PAYMENT_LINK = os.getenv("PAYMENT_LINK")
+SUBSCRIPTION_DAYS = int(os.getenv("SUBSCRIPTION_DAYS"))
+GRACE_PERIOD_DAYS = int(os.getenv("GRACE_PERIOD_DAYS"))
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
